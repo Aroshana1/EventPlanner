@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         
+          <!--User-->
+          
+         <servlet>
+         	<servlet-name>login</servlet-name>
+         	<servlet-class>com.event.LoginServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>login</servlet-name>
+         	<url-pattern>/log</url-pattern>
+         </servlet-mapping>
+         
+         <servlet>
+         	<servlet-name>signup</servlet-name>
+         	<servlet-class>com.event.SignUpServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>signup</servlet-name>
+         	<url-pattern>/signup</url-pattern>
+         </servlet-mapping> 
+         
+          <servlet>
+         	<servlet-name>updateprofile</servlet-name>
+         	<servlet-class>com.event.UpdateProfileServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>updateprofile</servlet-name>
+         	<url-pattern>/update</url-pattern>
+         </servlet-mapping> 
+         
+         <servlet>
+         	<servlet-name>deleteaccount</servlet-name>
+         	<servlet-class>com.event.DeleteAccountServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>deleteaccount</servlet-name>
+         	<url-pattern>/delete</url-pattern>
+         </servlet-mapping> 
+         
+          <!--Manage Event-->
+         
+          <servlet>
+         	<servlet-name>addevent</servlet-name>
+         	<servlet-class>com.event.admin.AddEventServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>addevent</servlet-name>
+         	<url-pattern>/admin/addevent</url-pattern>
+         </servlet-mapping> 
+         
+         <servlet>
+         	<servlet-name>editevent</servlet-name>
+         	<servlet-class>com.event.admin.EditEventServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>editevent</servlet-name>
+         	<url-pattern>/admin/editevent</url-pattern>
+         </servlet-mapping> 
+         
+         <servlet>
+         	<servlet-name>deleteevent</servlet-name>
+         	<servlet-class>com.event.admin.DeleteEventServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>deleteevent</servlet-name>
+         	<url-pattern>/admin/delevent</url-pattern>
+         </servlet-mapping> 
+         
+          <!--Admin Login-->
+         <servlet>
+         	<servlet-name>adminlogin</servlet-name>
+         	<servlet-class>com.event.admin.AdminLoginServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>adminlogin</servlet-name>
+         	<url-pattern>/admin/adminlogin</url-pattern>
+         </servlet-mapping> 
+         
+         
+          <!--Manage Event Planner-->
+         
+          <servlet>
+         	<servlet-name>addeventplanner</servlet-name>
+         	<servlet-class>com.event.admin.AddEventPlannerServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>addeventplanner</servlet-name>
+         	<url-pattern>/admin/addeventplanner</url-pattern>
+         </servlet-mapping> 
+         
+         <servlet>
+         	<servlet-name>updateeventplanner</servlet-name>
+         	<servlet-class>com.event.admin.UpdateEventPlannerServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>updateeventplanner</servlet-name>
+         	<url-pattern>/admin/updateeventplanner</url-pattern>
+         </servlet-mapping> 
+         
+         <servlet>
+         	<servlet-name>removeeventplanner</servlet-name>
+         	<servlet-class>com.event.admin.RemoveEventPlannerServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>removeeventplanner</servlet-name>
+         	<url-pattern>/admin/removeeventplanner</url-pattern>
+         </servlet-mapping> 
+         
+          <!--Admin logout-->
+          <servlet>
+         	<servlet-name>AdminLogoutServlet</servlet-name>
+         	<servlet-class>com.event.admin.AdminLogoutServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>AdminLogoutServlet</servlet-name>
+         	<url-pattern>/admin/AdminLogoutServlet</url-pattern>
+         </servlet-mapping> 
+         
+         
+              <!--Request Event-->
+         
+          <servlet>
+         	<servlet-name>requestevent</servlet-name>
+         	<servlet-class>com.event.RequestEventServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>requestevent</servlet-name>
+         	<url-pattern>/requestevent</url-pattern>
+         </servlet-mapping> 
+         
+                      <!--user edit request-->
+         
+          <servlet>
+         	<servlet-name>editrequest</servlet-name>
+         	<servlet-class>com.event.UpdateRequestServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>editrequest</servlet-name>
+         	<url-pattern>/editrequest</url-pattern>
+         </servlet-mapping> 
+         
+                               <!--user cancel request-->
+         
+          <servlet>
+         	<servlet-name>cancelrequest</servlet-name>
+         	<servlet-class>com.event.DeleteRequestServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>cancelrequest</servlet-name>
+         	<url-pattern>/cancelrequest</url-pattern>
+         </servlet-mapping> 
+         
+                               <!--admin edit request-->
+         
+          <servlet>
+         	<servlet-name>UpdateEventRequest</servlet-name>
+         	<servlet-class>com.event.admin.UpdateEventRequestServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>UpdateEventRequest</servlet-name>
+         	<url-pattern>/admin/UpdateEventRequest</url-pattern>
+         </servlet-mapping> 
+         
+                               <!--admin cancel request-->
+         
+          <servlet>
+         	<servlet-name>removerequest</servlet-name>
+         	<servlet-class>com.event.admin.CancelEventRequestServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>removerequest</servlet-name>
+         	<url-pattern>/admin/removerequest</url-pattern>
+         </servlet-mapping> 
+         
+         
+                                        <!--admin add user-->
+         
+          <servlet>
+         	<servlet-name>adduser</servlet-name>
+         	<servlet-class>com.event.admin.AddUserServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>adduser</servlet-name>
+         	<url-pattern>/admin/adduser</url-pattern>
+         </servlet-mapping> 
+         
+                               <!--admin edit user-->
+         
+          <servlet>
+         	<servlet-name>edituser</servlet-name>
+         	<servlet-class>com.event.admin.EditUserServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>edituser</servlet-name>
+         	<url-pattern>/admin/edituser</url-pattern>
+         </servlet-mapping> 
+         
+         
+                                        <!--admin remove user-->
+         
+          <servlet>
+         	<servlet-name>removeuser</servlet-name>
+         	<servlet-class>com.event.admin.DeleteUserServlet</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         	<servlet-name>removeuser</servlet-name>
+         	<url-pattern>/admin/removeuser</url-pattern>
+         </servlet-mapping> 
+         
+         
+         
+
+         
+</web-app>         
